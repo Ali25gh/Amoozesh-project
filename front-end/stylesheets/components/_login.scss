@@ -1,0 +1,75 @@
+.login {
+    @include flex(center, center);
+    flex-direction: row-reverse;
+    padding: 1rem;
+    background-color: $color-green1;
+    border-radius: 50px;
+    @media only screen and (max-width: 768px) {
+        .login__login__div{
+            display: none;
+        }
+        .login__character{
+            display: none;
+        }
+        .login__rigester__div{
+            display: none;
+        }
+        .login__icon{
+            font-size: 2rem;
+        }
+    }
+    @media only screen and (min-width: 1500px) {
+        padding-right: 3rem;
+    }
+    &__link {
+        padding-left: 1rem;
+    }
+    &__rigester {
+        position: relative;
+        transition: all 0.3s ease;
+        &:hover {
+            top: -1rem;
+            left: 0.35rem;
+            font-size: 1.2rem; 
+            .login{
+                background-color: red;
+            }
+        }
+        &__div{
+            position: relative;
+            & a{
+                padding: 1rem;
+            }
+        }
+
+    }
+    
+    &__login{
+        position: relative;
+        transition: all 0.3s ease;
+        &:hover {
+            top: -1rem;
+            left: 0.35rem;
+            font-size: 1.3rem;
+        }
+        &__div{
+            position: relative;
+            & a{
+                padding: 1rem;
+            }
+        }
+    }
+    
+    &__character {
+        color: lighten($color-black1, $amount: 57);
+    }
+    &__icon {
+        color: darken($color-green1, $amount: 37);
+        @media only screen and (max-width: 768px) {
+            color: lighten($color-orange1, 8%);
+        }
+        @media only screen and (max-width: 1500px) {
+            padding-left: 0;
+        }
+    }
+}

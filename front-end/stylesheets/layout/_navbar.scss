@@ -1,0 +1,50 @@
+.navbar {
+    @media only screen and (max-width: 768px) {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background-color: $color-white;
+        box-shadow: 0 0 4px #444444;
+    }
+
+    &__search-box {
+        width: 20rem;
+        @media only screen and (max-width: 992px) {
+            order: 1;
+            width: auto;
+        }
+    }
+    &__nav {
+        flex-grow: 1;
+        @media only screen and (max-width: 992px) {
+            flex-grow: 0;
+        }
+    }
+
+    &__logo {
+        padding-left: 5rem;
+        @media only screen and (max-width: 992px) {
+            order: 2;
+            padding-left: 0;
+        }
+
+        & img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    &__login {
+        @include flex(center, center);
+        position: relative;
+        right: 4rem;
+        bottom: 0.5rem;
+        padding: 1rem;
+        padding-bottom: 1rem;
+        @media only screen and (min-width: 1500px) {
+            right: 8rem;
+        }
+        @media only screen and (max-width: 992px) {
+            right: -1rem;
+        }
+    }
+}

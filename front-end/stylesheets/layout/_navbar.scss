@@ -14,6 +14,16 @@
             width: auto;
         }
     }
+    &__search-input {
+        position: absolute;
+        top: 11rem;
+        right: auto;
+        margin-right: 11rem;
+
+        @media only screen and (max-width: 576px) {
+            margin-right: 0;
+        }
+    }
     &__nav {
         flex-grow: 1;
         @media only screen and (max-width: 992px) {

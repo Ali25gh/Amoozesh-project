@@ -1313,26 +1313,12 @@ a:hover {
 
 .login__rigester {
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.login__rigester:hover {
-  top: -1rem;
-  left: 0.35rem;
-  font-size: 1.2rem;
-}
-
-.login__rigester:hover .login {
-  background-color: red;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .login__rigester__div {
   position: relative;
-}
-
-.login__rigester__div a {
-  padding: 1rem;
 }
 
 .login__login {
@@ -1345,6 +1331,7 @@ a:hover {
   top: -1rem;
   left: 0.35rem;
   font-size: 1.3rem;
+  cursor: alias !important;
 }
 
 .login__login__div {
@@ -1360,7 +1347,10 @@ a:hover {
 }
 
 .login__icon {
+  cursor: alias;
   color: #3ccec5;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 @media only screen and (max-width: 768px) {
@@ -2141,6 +2131,19 @@ a:hover {
   }
 }
 
+.navbar__search-input {
+  position: absolute;
+  top: 11rem;
+  right: auto;
+  margin-right: 11rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar__search-input {
+    margin-right: 0;
+  }
+}
+
 .navbar__nav {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2208,6 +2211,7 @@ a:hover {
   height: 45rem;
   padding: 3rem 0;
   background-color: #d3f4f2;
+  overflow: hidden;
 }
 
 .header::after {
@@ -2237,7 +2241,17 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .header__search {
-    top: 17rem;
+    top: 40rem;
+  }
+}
+
+.header__search1 {
+  padding-top: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__search1 {
+    display: none;
   }
 }
 

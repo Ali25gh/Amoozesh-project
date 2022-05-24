@@ -32,7 +32,7 @@
             <div
                 class="container pt-20 pb-20 flex justify-content-center justify-content-space-between justify-content-space-around">
                 <div class="navbar__search-box">
-                    <div class="search__icon" onclick="search_open()">
+                    <div class="search__icon" onclick="search_open(),search_open2()">
                         <div class="search__icon__div" action="#" onsubmit="false">
 
                             <button class="search__icon__button">
@@ -41,7 +41,19 @@
                             </button>
                         </div>
                     </div>
-
+                </div>
+                <div class="navbar__search-input">
+                    <div class="header__search1">
+                        <div class="search" id="search1">
+                            <form class="search__form" action="#" onsubmit="false">
+                                <input type="text" placeholder="جستجو کنید " class="search__input" id="search__input">
+                                <button class="search__button">
+                                    <span class="search__circle"></span>
+                                    <span class="search__stand"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="navbar__nav">
                     <div class="nav">
@@ -189,18 +201,18 @@
                 </div>
                 <div class="navbar__login">
                     <div class="login">
-                        <span><i class="fas fa-user login__link login__icon "></i></span>
-                        
-                            <div class="login__login__div"><a href="#" class="login__link login__login"> ورود</a>
+                        <span class="login__link login__icon"id="icon_navbar" ><i class="fas fa-user" ></i></span>
 
-                            </div>
-                            <span class="login__link login__character">|</span>
-                            <div class="login__rigester__div">
+                        <div class="login__login__div" ><a href="#" class="login__link login__login" id="login"> ورود</a>
 
-                                <a href="#" class="login__link login__rigester">ثبت نام </a>
+                        </div>
+                        <span class="login__link login__character">|</span>
+                        <div class="login__rigester__div">
 
-                            </div>
-                        
+                            <a href="#" class="login__link login__rigester">ثبت نام </a>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -210,23 +222,23 @@
             <div class="header__banner">
                 <div class="header__h-tags">
                     <div class="header__wrap">
-                        <h1 class="header__intro">به سایت آموزش خوش آمدید</h1>
+                        <h1 class="header__intro" id="header__intro">به سایت آموزش خوش آمدید</h1>
                     </div>
                     <h2 class="header__subtitle"> با خواندن این متن وقت خود را تلف کردید</h2>
                     <h2 class="header__subtitle">این صرفا یک متن تستی است </h2>
                     <a href="https://github.com/Aligh5831" target="_blank" class="btn btn__swipe"><span>ورود به گیت
                             هاب</span></a>
-                            <div class="header__search">
-                                <div class="search" id="search">
-                                    <form class="search__form" action="#" onsubmit="false">
-                                        <input type="text" placeholder="جستجو کنید " class="search__input" id="search_input">
-                                        <button class="search__button">
-                                            <span class="search__circle"></span>
-                                            <span class="search__stand"></span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
+                    <div class="header__search">
+                        <div class="search" id="search">
+                            <form class="search__form" action="#" onsubmit="false">
+                                <input type="text" placeholder="جستجو کنید " class="search__input" id="search__input">
+                                <button class="search__button">
+                                    <span class="search__circle"></span>
+                                    <span class="search__stand"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="header__rocket-bg">
@@ -235,6 +247,6 @@
             </div>
         </header>
     </body>
-    <script src="front-end/script/search.js"></script>
+    <script src="front-end/script/navbar.js"></script>
 
     </html>

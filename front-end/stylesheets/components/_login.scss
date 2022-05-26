@@ -4,59 +4,125 @@
     padding: 1rem;
     background-color: $color-green1;
     border-radius: 50px;
+&:hover{
     @media only screen and (max-width: 768px) {
-        .login__login__div{
-            display: none;
-        }
-        .login__character{
-            display: none;
-        }
-        .login__rigester__div{
-            display: none;
-        }
-        .login__icon{
-            font-size: 2rem;
-        }
     }
+}
     @media only screen and (min-width: 1500px) {
         padding-right: 3rem;
     }
+
+
+    &__after {
+        content: "";
+        font-family: "vazir";
+        font-size: 1.1rem;
+        position: absolute;
+        top: 5.5rem;
+        right: -3.9rem;
+        width: 11.95rem;
+        height: 2rem;
+        color: black;
+        background-color: $color-green1;
+        border-radius: 10%;
+        text-align: center;
+        display: none;
+        z-index: -1;
+        transition: all 0.8s ease;
+    }
+    &__before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #a8cae4;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 5rem;
+        right: 2.2rem;
+        display: none;
+        z-index: -2;
+        transition: all 0.8s ease;
+    }
     &__link {
         padding-left: 1rem;
+        @media only screen and (max-width: 768px) {
+            padding-left: 0;
+        }
     }
     &__rigester {
         position: relative;
         transition: all 0.8s ease;
-        &__div{
-            position: relative;
+        @media only screen and (max-width: 768px) {
+            display: none
         }
-
+        z-index: 1;
+        &__div {
+            position: relative;
+            @media only screen and (max-width: 768px) {
+                position: absolute;
+                top: 4rem;
+                right: -5rem;
+                left: 1rem;
+                transform: translate(-25px, -14px);
+                
+            }
+        }
     }
-    
-    &__login{
+
+    &__login {
         position: relative;
         transition: all 0.3s ease;
+        z-index: 5;
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+        @media only screen and (max-width: 768px) {
+            padding-right: 1rem;
+        }
         &:hover {
             top: -1rem;
             left: 0.35rem;
             font-size: 1.3rem;
             cursor: alias !important;
+            @media only screen and (max-width: 768px) {
+                top: 0rem;
+                left: 0rem;
+                font-size: 1.5rem;
+                
+            }
         }
-        &__div{
+        &__div {
             position: relative;
-            & a{
+            @media only screen and (max-width: 768px) {
+                position: absolute;
+                top: 4rem;
+                right: 5rem;
+                left: 1rem;
+                transform: translate(25px, -23px);
+            }
+            & a {
                 padding: 1rem;
             }
         }
     }
-    
+
     &__character {
         color: lighten($color-black1, $amount: 57);
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
     }
     &__icon {
         cursor: alias;
         color: darken($color-green1, $amount: 37);
-        transition: all .3s ease;
+        transition: all 0.3s ease;
+        &:hover {
+            @media only screen and (max-width: 768px) {
+                .login__rigester {
+                    animation: login-show 1s ease;
+                }
+            }
+        }
         @media only screen and (max-width: 768px) {
             color: lighten($color-orange1, 8%);
         }

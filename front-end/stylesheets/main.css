@@ -1286,45 +1286,102 @@ a:hover {
   border-radius: 50px;
 }
 
-@media only screen and (max-width: 768px) {
-  .login .login__login__div {
-    display: none;
-  }
-  .login .login__character {
-    display: none;
-  }
-  .login .login__rigester__div {
-    display: none;
-  }
-  .login .login__icon {
-    font-size: 2rem;
-  }
-}
-
 @media only screen and (min-width: 1500px) {
   .login {
     padding-right: 3rem;
   }
 }
 
+.login__after {
+  content: "";
+  font-family: "vazir";
+  font-size: 1.1rem;
+  position: absolute;
+  top: 5.5rem;
+  right: -3.9rem;
+  width: 11.95rem;
+  height: 2rem;
+  color: black;
+  background-color: #d3f4f2;
+  border-radius: 10%;
+  text-align: center;
+  display: none;
+  z-index: -1;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.login__before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #a8cae4;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 5rem;
+  right: 2.2rem;
+  display: none;
+  z-index: -2;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
 .login__link {
   padding-left: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .login__link {
+    padding-left: 0;
+  }
 }
 
 .login__rigester {
   position: relative;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .login__rigester {
+    display: none;
+  }
 }
 
 .login__rigester__div {
   position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+  .login__rigester__div {
+    position: absolute;
+    top: 4rem;
+    right: -5rem;
+    left: 1rem;
+    -webkit-transform: translate(-25px, -14px);
+            transform: translate(-25px, -14px);
+  }
+}
+
 .login__login {
   position: relative;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 768px) {
+  .login__login {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .login__login {
+    padding-right: 1rem;
+  }
 }
 
 .login__login:hover {
@@ -1334,8 +1391,27 @@ a:hover {
   cursor: alias !important;
 }
 
+@media only screen and (max-width: 768px) {
+  .login__login:hover {
+    top: 0rem;
+    left: 0rem;
+    font-size: 1.5rem;
+  }
+}
+
 .login__login__div {
   position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .login__login__div {
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+    left: 1rem;
+    -webkit-transform: translate(25px, -23px);
+            transform: translate(25px, -23px);
+  }
 }
 
 .login__login__div a {
@@ -1346,11 +1422,24 @@ a:hover {
   color: rgba(176, 182, 185, 0.916404);
 }
 
+@media only screen and (max-width: 768px) {
+  .login__character {
+    display: none;
+  }
+}
+
 .login__icon {
   cursor: alias;
   color: #3ccec5;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .login__icon:hover .login__rigester {
+    -webkit-animation: login-show 1s ease;
+            animation: login-show 1s ease;
+  }
 }
 
 @media only screen and (max-width: 768px) {

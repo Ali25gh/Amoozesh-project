@@ -51,7 +51,7 @@
     }
     &__rigester {
         position: relative;
-        transition: all 0.8s ease;
+        transition: all 0.6s ease;
         @media only screen and (max-width: 768px) {
             display: none
         }
@@ -71,7 +71,7 @@
 
     &__login {
         position: relative;
-        transition: all 0.3s ease;
+        transition: all 0.6s ease;
         z-index: 5;
         @media only screen and (max-width: 768px) {
             display: none;

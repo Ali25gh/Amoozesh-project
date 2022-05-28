@@ -6,6 +6,8 @@ let login = document.getElementById("login")
 let rigester = document.getElementById("rigester")
 let login_after = document.getElementById("login_after")
 let login_before = document.getElementById("login_before")
+let login_div = document.getElementById("login_div")
+let rigester_div = document.getElementById("rigester_div")
 //search
 function search_open() {
     search.style.width = "30rem";
@@ -43,8 +45,19 @@ function login_animation() {
             rigester.style.display = "none";
             login_after.style.display = "none";
             login_before.style.display = "none";
-        }, 6000)
+            login.style.transform = "translate(0, -7px)";
+            rigester.style.transform = "translate(-7px, -7px)";
+        }, 10000)
     }
 
 }
+function close_login() {
+    login.style.display = "none";
+    rigester.style.display = "none";
+    login_after.style.display = "none";
+    login_before.style.display = "none";
+    login.style.transform = "translate(0, -7px)";
+    rigester.style.transform = "translate(-7px, -7px)";
+}
+
 

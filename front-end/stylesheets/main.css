@@ -1339,8 +1339,8 @@ a:hover {
 
 .login__rigester {
   position: relative;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   z-index: 1;
 }
 
@@ -1367,8 +1367,8 @@ a:hover {
 
 .login__login {
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   z-index: 5;
 }
 

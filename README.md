@@ -1,1 +1,1 @@
-first common project with https://github.com/mahdijz5/first-common-project
+first common project with https://github.com/mahdijz5

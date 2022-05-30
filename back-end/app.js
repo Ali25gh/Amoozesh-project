@@ -50,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //* Routes
 app.use('/', require('./routes/home'))
+app.use("/user" , require("./routes/user"))
 
 
 const PORT = process.env.PORT || 3000;

@@ -109,18 +109,47 @@ btn.addEventListener("click", function () {
         error.style.right = "35.9rem";
         error.style.top = "27rem";
         error.innerHTML = "فیلد ها را پر کنید";
+        error.style.opacity = "1";
+        setTimeout(() => {
+            error.style.opacity = "0";
+        }, 3000)
+    }
+    else if (fullname.value.length < 4) {
+        error.style.right = "10.9rem";
+        error.style.top = "20rem";
+        error.style.opacity = "0";
+        error.innerHTML = 'کاراکتر های نام کاربری باید حداقل ۴ تا باشند <i class="fas fa-window-close" style="color: #8a010f;padding-right: 0.2rem;animation: wave-hand 3.6s .3s;"></i>';
+        setTimeout(() => {
+            error.style.opacity = "1";
+        }, 1000)
+        setTimeout(() => {
+            error.style.opacity = "0";
+        }, 4000)
+    }
+    else if (email.value.length < 8 || email.value.length > 15) {
+        error.style.right = "10.9rem";
+        error.style.top = "20rem";
+        error.style.opacity = "0";
+        error.innerHTML = 'کاراکتر های رمز باید بین ۸ تا ۱۵ باشند <i class="fas fa-window-close" style="color: red;padding-right: 0.2rem;animation: wave-hand 3.6s .3s;"></i>';
+        setTimeout(() => {
+            error.style.opacity = "1";
+        }, 1000)
+        setTimeout(() => {
+            error.style.opacity = "0";
+        }, 4000)
     }
     else {
+        error.style.opacity = "1";
         error.style.right = "34.9rem";
         error.style.top = "27rem";
-        error.innerHTML = "فرم ارسال شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
+        error.innerHTML = "فرم ارسال شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';   
     }
     if (error.style.right == "34.9rem") {
         setTimeout(() => {
             glass.style.animation = "fade-out .76s ease";
-        }, 2100)
+        }, 3100)
         setTimeout(() => {
             glass.style.display = "none";
-        }, 2600)
+        }, 3600)
     }
 })

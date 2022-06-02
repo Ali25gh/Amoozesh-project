@@ -150,9 +150,9 @@
             transform: rotate(45deg) scale(1);
         }
     }
-    &__btn-position{
-        @include flex(center,center);
-        width: 90%;
+    &__btn-position {
+        @include flex(center, center);
+        width: 93%;
     }
     &__error {
         position: absolute;
@@ -168,16 +168,31 @@
         @media only screen and (max-width: 768px) {
             top: 29.1rem;
         }
-        @media only screen and (max-width: 468px){
+        @media only screen and (max-width: 468px) {
             right: 13.9rem;
             font-size: 1.2rem;
         }
-         
     }
-    &__singin{
-        @include flex(center,center);
+    &__singin {
+        @include flex(center, center);
         width: 90%;
         position: relative;
-        bottom: 1.5rem;
+        top: .5rem;
+    }
+    &__background > img {
+        position: relative;
+        bottom:  .8rem;
+        width: 50rem;
+        height: 31rem;
+        border-radius: 1rem;
+        z-index: 0;
+        transition: all .5s ease-in-out;
+        @media only screen and (max-width: 576px) {
+            width: 25rem;
+            height: 33rem;
+        }
+        @media only screen and (max-width: 768px) {
+            transform: scale(3.37);
+        }
     }
 }

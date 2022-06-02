@@ -1974,7 +1974,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 93%;
 }
 
 .form__error {
@@ -2015,15 +2015,38 @@ a:hover {
           align-items: center;
   width: 90%;
   position: relative;
-  bottom: 1.5rem;
+  top: .5rem;
+}
+
+.form__background > img {
+  position: relative;
+  bottom: .8rem;
+  width: 50rem;
+  height: 31rem;
+  border-radius: 1rem;
+  z-index: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+@media only screen and (max-width: 576px) {
+  .form__background > img {
+    width: 25rem;
+    height: 33rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form__background > img {
+    -webkit-transform: scale(3.37);
+            transform: scale(3.37);
+  }
 }
 
 .glass {
   position: absolute;
-  right: 5rem;
-  top: 5rem;
   width: 50rem;
-  height: 32rem;
+  height: 33rem;
   border: 1px solid #f1f1f1;
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.329);
@@ -2031,6 +2054,7 @@ a:hover {
           box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
   padding: 1rem;
   overflow: hidden;
+  z-index: 1;
 }
 
 @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
@@ -2043,9 +2067,6 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .glass {
-    position: relative;
-    right: 2rem;
-    top: 5rem;
     width: 90%;
     height: 34rem;
   }
@@ -2068,10 +2089,23 @@ a:hover {
   opacity: .35;
 }
 
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30rem;
+}
+
 .maps {
   display: block;
   width: 100%;
-  height: 49rem;
+  height: 83rem;
   border: 0;
   outline: 0;
 }

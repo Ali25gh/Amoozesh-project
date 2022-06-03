@@ -1,0 +1,30 @@
+    <div id="form" class="rtl">
+        <main class="form-signin text-center pt-5">
+            <%- include('./includes/validationWarnnig.ejs') %> 
+                <form action="/user/signup" method="POST" class="pb-5">
+                    <h1 class="h3 mb-3 fw-normal">ثبت نام</h1>
+
+                    <div class="">
+                        <label for="username" class="my-2 d-block"> نام کاربری : </label>
+                        <input type="text" name="username" class="form-control" id="username" placeholder="مهدی جاویدی">
+                    </div>
+                    <div class="">
+                        <label for="email" class="my-2">ایمیل :</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+                    <div class="">
+                        <label for="password" class="mt-2 mb-3">رمز عبور :</label>
+                        <input type="password" name="password" class="form-control" id="password"
+                            placeholder="رمز عبور">
+                    </div>
+                    <div class="">
+                        <label for="confirmPassword" class="mt-2 mb-3">تکرار رمز عبور :</label>
+                        <input type="password" name="confirmPassword" class="form-control" id="confirmPassword"
+                            placeholder="تکرار رمز عبور">
+                    </div>
+
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">ورود</button>
+                    <p class="mt-5 mb-3 text-muted"> <a href="/user/login">قبلا ثبت نام کرده ام</a> </p>
+                </form>
+        </main>
+    </div>

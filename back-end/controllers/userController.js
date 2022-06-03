@@ -1,10 +1,30 @@
 const User = require('../models/user')
+const passport = require('passport');
 
 exports.getLogin = (req,res) => {
     res.render('login' , {
-        pageTitle : "Login"
+        pageTitle : "Login",
+        errors : req.flash("error")
     })
 }
+
+exports.handleLogin = async (req,res,next) => {
+    passport.authenticate('local', {
+        failureRedirect: '/user/login',
+        failureFlash: true,
+    })(req, res, next)
+}
+
+exports.rememberMe = (req, res) => {
+    if (req.body.remember) {
+        req.session.cookie.originalMaxAge = 24 * 60 * 60 * 1000; // 1 day / 24h
+    } else {
+        req.session.cookie.expire = null;
+    }
+
+    res.redirect('/admin/dashboard')
+}
+
 
 exports.getSignUp = (req,res) => {
     res.render('signup' , {

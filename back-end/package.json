@@ -20,6 +20,7 @@
   "homepage": "https://github.com/mahdijz5/first-common-project#readme",
   "dependencies": {
     "app-root-path": "^3.0.0",
+    "bcrypt": "^5.0.1",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "dotenv": "^16.0.0",
@@ -28,6 +29,8 @@
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.2",
     "mongoose": "^6.3.2",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "passport": "^0.6.0",
+    "yup": "^0.32.11"
   }
 }

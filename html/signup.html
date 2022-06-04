@@ -6,17 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amoozesh project</title>
-    <link rel="stylesheet" href="front-end/stylesheets/all.css">
-    <link rel="stylesheet" href="front-end/stylesheets/main.css">
+    <link rel="stylesheet" href="../front-end/stylesheets/all.css">
+    <link rel="stylesheet" href="../front-end/stylesheets/main.css">
 </head>
 
 <body>
+    <div id="contact" class="contact mt-50 mb-50">
+        <div id="glass" class="glass1">
+            <form action="#" class="form" id="form">
+                <div class="form__group">
+                    <input type="text" id="fullname" value="" onblur="glass_animation()">
+                    <label for="fullname" id="label_fullname">نام کاربری</label>
+                </div>
+                <div class="form__group">
+                    <input type="password" id="password" value="" onblur="glass_animation()">
+                    <label for="password" id="label_password">رمز</label>
+                    <span class="form__input-bar"></span>
+                </div>
+                <div class="form__group">
+                    <input type="email" id="email" value="" onblur="glass_animation()">
+                    <label for="email" id="label_email">ایمیل</label>
+                    <span class="form__input-bar"></span>
+                </div>
+                
+                <div class="form__group">
+                    <div class="form__check">
+                        <input type="radio" name="gender" value="not_selected" id="male" onclick="male_radio()">
+                        <label for="male">آقا</label>
+                    </div>
+                    <div class="form__check">
+                        <input type="radio" name="gender" value="not_selected" id="female" onclick="fmale_radio()">
+                        <label for="male">خانم</label>
+                    </div>
+                </div>
+                <div class="form__check-text" id="radio_text">سلام آقا😉<span id="radio_hand">👋</span></div>
+                <div class="form__check-text" id="radio_text_2">سلام خانم😊<span class="fmale_span"
+                        id="radio_hand_2">👋</span></div>
+                        <div class="form__group form__custom">
+                            <input type="checkbox" id="newsletter">
+                            <label for="newsletter">من را فراموش نکن</label>
+                        </div>
+                        <div class="form__btn-position2">
+                            <button id="btn_form" type="button" class="btn btn__rippel btn__rippel--blue btn__rippel-position" disabled=""
+                                style="opacity: 0.5; pointer-events: none;">
+                                <i class="fas fa-paper-plane"></i> <span>ارسال</span>
+        
+                            </button>
+                        </div>
 
+                <span class="form__error" id="err"></span>
+
+            </form>
+        </div>
+    </div>
 
 
 </body>
-
+<script src="../front-end/script/form(singup).js"></script>
 
 </html>
-
-    

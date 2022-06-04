@@ -126,6 +126,9 @@
             opacity: 0;
             transition: opacity 1s 1.05s ease, transform 0.8s 1.05s ease;
         }
+        &-position{
+            bottom: 5rem
+        }
     }
     &__me {
         @include flex(center, center);

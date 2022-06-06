@@ -1626,6 +1626,12 @@ a:hover {
   bottom: 5rem;
 }
 
+@media only screen and (max-width: 576px) {
+  .btn__rippel-position {
+    bottom: 3rem;
+  }
+}
+
 .btn__me {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1854,11 +1860,17 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .glass1 {
-    width: 90%;
-    height: 34rem;
+    width: 85%;
+    height: 36rem;
   }
   .glass1 .form__input-bar {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .glass1 {
+    height: 38rem;
   }
 }
 
@@ -1886,7 +1898,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30rem;
+  margin-top: 33rem;
 }
 
 .maps {
@@ -2161,7 +2173,7 @@ a:hover {
 
 @media only screen and (max-width: 576px) {
   .form__background > img {
-    width: 25rem;
+    width: auto;
     height: 33rem;
   }
 }
@@ -2170,6 +2182,7 @@ a:hover {
   .form__background > img {
     -webkit-transform: scale(3.37);
             transform: scale(3.37);
+    width: auto;
   }
 }
 
@@ -2207,6 +2220,13 @@ a:hover {
 .form__custom {
   right: 30rem;
   bottom: 4.7rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .form__custom {
+    right: auto;
+    bottom: auto;
+  }
 }
 
 .form__check {
@@ -2445,6 +2465,36 @@ a:hover {
     right: 13.9rem;
     font-size: 1.2rem;
   }
+}
+
+.form__background > img {
+  position: relative;
+  bottom: .8rem;
+  width: 50rem;
+  height: 31rem;
+  border-radius: 1rem;
+  z-index: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+@media only screen and (max-width: 576px) {
+  .form__background > img {
+    width: auto;
+    height: 33rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form__background > img {
+    -webkit-transform: scale(3.37);
+            transform: scale(3.37);
+    width: auto;
+  }
+}
+
+html {
+  overflow: hidden;
 }
 
 .nav__lists {

@@ -14,11 +14,14 @@
         backdrop-filter: blur(4px);
     }
     @media only screen and (max-width: 768px) {
-        width: 90%;
-        height: 34rem;
+        width: 85%;
+        height: 36rem;
         .form__input-bar{
             display: none;
         }
+    }
+    @media only screen and (max-width: 576px) {
+        height: 38rem;
     }
     @media only screen and (max-width: 369px) {
         .form__check-text {
@@ -34,6 +37,6 @@
 }
 .contact{
     @include flex(center,center);
-    margin-top: 30rem;
+    margin-top: 33rem;
 }
 

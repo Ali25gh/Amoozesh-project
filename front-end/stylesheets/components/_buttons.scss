@@ -127,7 +127,10 @@
             transition: opacity 1s 1.05s ease, transform 0.8s 1.05s ease;
         }
         &-position{
-            bottom: 5rem
+            bottom: 5rem;
+            @media only screen and (max-width: 576px) {
+                bottom: 3rem
+            }
         }
     }
     &__me {

@@ -19,6 +19,10 @@
     &__custom{
         right: 30rem;
         bottom: 4.7rem;
+        @media only screen and (max-width: 576px) {
+            right: auto;
+            bottom: auto;
+        }
     }
     &__check {
         display: inline-flex;
@@ -209,5 +213,25 @@
         }
          
     }
+    &__background > img {
+        position: relative;
+        bottom:  .8rem;
+        width: 50rem;
+        height: 31rem;
+        border-radius: 1rem;
+        z-index: 0;
+        transition: all .5s ease-in-out;
+        @media only screen and (max-width: 576px) {
+            width: auto;
+            height: 33rem;
+        }
+        @media only screen and (max-width: 768px) {
+            transform: scale(3.37);
+            width: auto;
+        }
+    }
     
+}
+html{
+    overflow: hidden;
 }

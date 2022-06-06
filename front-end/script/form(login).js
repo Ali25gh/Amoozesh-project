@@ -16,10 +16,11 @@ const error = document.getElementById("err");
 let btn = document.getElementById("btn_form")
 let div_disable = document.getElementById("div_diasabler")
 document.getElementById("glass").addEventListener("click", function () {
-    document.getElementById("form__background").style.transform = "scale(4.5)";
+    document.getElementById("form__background").style.transform = "scale(3.5)";
+    document.getElementById("form__background").style.width = "55rem";
     if (window.matchMedia("(max-width: 992px)").matches) {
         document.getElementById("form__background").style.transform = "scale(3.37)"
-
+        document.getElementById("form__background").style.width = "auto";
     }
 });
 function glass_animation() {

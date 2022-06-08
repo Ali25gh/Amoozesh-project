@@ -16,7 +16,7 @@
         width: 100%;
         margin-bottom: 2.5rem;
     }
-    &__custom{
+    &__custom {
         right: 30rem;
         bottom: 4.7rem;
         @media only screen and (max-width: 576px) {
@@ -63,6 +63,7 @@
         appearance: none;
         border: 0;
         outline: 0;
+        font-family: "vazir";
     }
     & input[type="text"] {
         width: 100%;
@@ -193,6 +194,15 @@
         @include flex(center, center);
         width: 92%;
     }
+    &__eye {
+        font-family: "vazir";
+        position: relative;
+        bottom: 30.7rem;
+        right: 41rem;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 1s ease;
+    }
     &__error {
         position: absolute;
         top: 32.1rem;
@@ -207,20 +217,19 @@
         @media only screen and (max-width: 768px) {
             top: 29.1rem;
         }
-        @media only screen and (max-width: 468px){
+        @media only screen and (max-width: 468px) {
             right: 13.9rem;
             font-size: 1.2rem;
         }
-         
     }
     &__background > img {
         position: relative;
-        bottom:  .8rem;
+        bottom: 0.8rem;
         width: 50rem;
         height: 31rem;
         border-radius: 1rem;
         z-index: 0;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         @media only screen and (max-width: 576px) {
             width: auto;
             height: 33rem;
@@ -230,8 +239,7 @@
             width: auto;
         }
     }
-    
 }
-html{
+html {
     overflow: hidden;
 }

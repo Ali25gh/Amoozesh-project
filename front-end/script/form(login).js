@@ -13,7 +13,8 @@ const famale_radio = document.getElementById("female");
 const background = document.getElementById("form__background");
 const male = document.getElementById("male");
 const error = document.getElementById("err");
-let btn = document.getElementById("btn_form")
+let btn = document.getElementById("btn_form");
+
 let div_disable = document.getElementById("div_diasabler")
 document.getElementById("glass").addEventListener("click", function () {
     document.getElementById("form__background").style.transform = "scale(3.5)";
@@ -23,7 +24,7 @@ document.getElementById("glass").addEventListener("click", function () {
         document.getElementById("form__background").style.width = "auto";
     }
 });
-function glass_animation() {
+function animation() {
     glass.style.animation = "swing 1s ease";
     glass.style.backgroundColor = "white"
     btn.classList.add = "disable";
@@ -34,6 +35,9 @@ function glass_animation() {
         glass.style.animation = "swing .9s ease";
 
     }
+}
+function glass_animation() {
+    glass.style.backgroundColor = "white"
     if (fullname.innerHTML = !"") {
         label_fullname.style.top = "-1rem";
         label_fullname.style.bottom = "4rem";
@@ -133,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 btn.addEventListener("click", function () {
+    
     if ((email.value == "") || (fullname.value == "")) {
         error.style.right = "35.9rem";
         error.style.top = "27rem";
@@ -145,6 +150,8 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 3000)
+        return animation()
+        
     }
     else if (fullname.value.length < 4) {
         error.style.right = "10.9rem";
@@ -161,6 +168,7 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        return animation()
     }
     else if (email.value.length < 8 || email.value.length > 15) {
         error.style.right = "10.9rem";
@@ -177,6 +185,7 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        return animation()
     }
     else {
         error.style.opacity = "1";

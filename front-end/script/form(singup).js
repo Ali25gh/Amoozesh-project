@@ -15,8 +15,7 @@ const famale_radio = document.getElementById("female");
 const background = document.getElementById("form__background");
 const male = document.getElementById("male");
 const error = document.getElementById("err");
-let btn = document.getElementById("btn_form")
-let div_disable = document.getElementById("div_diasabler")
+const btn = document.getElementById("btn_form")
 document.getElementById("glass").addEventListener("click", function () {
     document.getElementById("form__background").style.transform = "scale(3.5)";
     document.getElementById("form__background").style.width = "55rem";
@@ -25,7 +24,7 @@ document.getElementById("glass").addEventListener("click", function () {
         document.getElementById("form__background").style.width = "auto";
     }
 });
-function glass_animation() {
+function animation() {
     glass.style.animation = "swing 1s ease";
     glass.style.backgroundColor = "white"
     btn.classList.add = "disable";
@@ -36,6 +35,9 @@ function glass_animation() {
         glass.style.animation = "swing .9s ease";
 
     }
+}
+function glass_animation() {
+    glass.style.backgroundColor = "white"
     if (fullname.innerHTML = !"") {
         label_fullname.style.top = "-1rem";
         label_fullname.style.bottom = "4rem";
@@ -64,13 +66,14 @@ function glass_animation() {
         label_password.style.webkitBorderBottomRightRadius = "20rem";
         label_password.style.webkitBorderBottomLeftRadius = "20rem";
     }
-    if ((email.innerHTML = !"") && (fullname.innerHTML = ! "") && (password.innerHTML = ! "")) {
+    if ((email.innerHTML = !"") && (fullname.innerHTML = ! "")) {
         btn.style.opacity = "1";
         btn.style.pointerEvents = "auto";
         btn.disabled = false;
     }
 }
 function male_radio() {
+    error.style.opacity = "0";
     famale_radio.value = ""
     male.value = ""
     radio_text.style.right = "18rem";
@@ -94,6 +97,7 @@ function male_radio() {
     }
 }
 function fmale_radio() {
+    error.style.opacity = "0";
     famale_radio.value = ""
     male.value = ""
     radio_text_2.style.right = "18rem";
@@ -115,6 +119,38 @@ function fmale_radio() {
             return fmale_radio()
         }, 2000)
     }
+}
+let see_span = document.getElementById("see");
+function see() {
+    
+    setTimeout(() => {
+        see_span.style.transform="rotate(360deg)"
+    }, 100)
+    setTimeout(() => {
+        password.type="text"; 
+        see_span.innerHTML="1"
+        
+    }, 1000)
+    setTimeout(() => {
+        see_span.innerHTML="2"
+        
+    }, 2000)
+    setTimeout(() => {
+        see_span.innerHTML="3"
+        
+    }, 3000)
+    setTimeout(() => {
+        see_span.innerHTML="4"
+        
+    }, 4000)
+    setTimeout(() => {
+        see_span.innerHTML="5"
+        
+    }, 5000)
+    setTimeout(() => {
+        password.type="password"; 
+        see_span.innerHTML='<i class="fas fa-eye"></i>'
+    }, 6000)
 }
 //Etebar sangi form
 
@@ -142,8 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
             break;
     }
 })
-
-
 btn.addEventListener("click", function () {
     if ((email.value == "") || (fullname.value == "") || (password.value == "")) {
         error.style.right = "17.9rem";
@@ -156,7 +190,9 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "1";
         }, 1000)
+        return animation()
     }
+
     else if (fullname.value.length < 4) {
         error.style.right = "7.9rem";
         error.style.top = "28rem";
@@ -171,6 +207,7 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        return animation()
     }
     else if (password.value.length < 8 || password.value.length > 15) {
         error.style.right = "9.9rem";
@@ -186,40 +223,43 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        return animation()
     }
+    else if (email.value == "@gmail.com") {
+        error.style.right = "17.9rem";
+        error.style.top = "27.9rem";
+        error.innerHTML = "ایمیل نا معتبر است😕";
 
-    else if (email.value == /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) {
-        error.style.right = "7.9rem";
-        error.style.top = "28rem";
-        if (window.matchMedia("(max-width: 530px)").matches) {
-            error.style.right = "2.9rem";
-            error.style.top = "28rem";
-        }
-        error.innerHTML = 'کاراکتر ه تا باشند <i class="fas fa-window-close" style="color: #8a010f;padding-right: 0.2rem;animation: wave-hand 3.6s .3s;"></i>';
-        setTimeout(() => {
-            error.style.opacity = "1";
-        }, 1000)
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        setTimeout(() => {
+            error.style.opacity = "1";
+        }, 1000)
+        return animation()
     }
+
     else if (famale_radio.value == "not_selected" && (male.value == "not_selected")) {
         error.style.right = "13.9rem";
         error.style.top = "27.9rem";
+        error.style.opacity = "1";
         setTimeout(() => {
             error.innerHTML = "جنسیت خود را انتخاب کنید" + " " + "🙍‍♀️🙎‍♂️";
             error.style.top = "27.9rem";
+            error.style.opacity = "1";
         }, 700)
         setTimeout(() => {
-            error.style.right = "70.9rem";
+            error.style.opacity = "0";
         }, 3700)
+        return animation()
     }
     else {
+        error.style.opacity = "1";
         error.style.top = "30.9rem";
-        error.style.right = "17.8rem";
-        error.innerHTML = "فرم ارسال شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
+        error.style.right = "19.8rem";
+        error.innerHTML = "انجام شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
     }
-    if (error.style.right == "17.8rem") {
+    if (error.style.right == "19.8rem") {
         setTimeout(() => {
             btn.style.animation = "fade-out .76s ease";
             btn.style.pointerEvents = "none";

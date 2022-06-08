@@ -2279,6 +2279,7 @@ a:hover {
           appearance: none;
   border: 0;
   outline: 0;
+  font-family: "vazir";
 }
 
 .form input[type="text"] {
@@ -2441,6 +2442,17 @@ a:hover {
   width: 92%;
 }
 
+.form__eye {
+  font-family: "vazir";
+  position: relative;
+  bottom: 30.7rem;
+  right: 41rem;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 .form__error {
   position: absolute;
   top: 32.1rem;
@@ -2469,13 +2481,13 @@ a:hover {
 
 .form__background > img {
   position: relative;
-  bottom: .8rem;
+  bottom: 0.8rem;
   width: 50rem;
   height: 31rem;
   border-radius: 1rem;
   z-index: 0;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media only screen and (max-width: 576px) {

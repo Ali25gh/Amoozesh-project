@@ -2453,6 +2453,22 @@ a:hover {
   transition: all 1s ease;
 }
 
+@media only screen and (max-width: 768px) {
+  .form__eye {
+    position: absolute;
+    bottom: 20.9rem;
+    right: -0.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .form__eye {
+    position: absolute;
+    bottom: 22.7rem;
+    right: -0.5rem;
+  }
+}
+
 .form__error {
   position: absolute;
   top: 32.1rem;
@@ -2479,9 +2495,9 @@ a:hover {
   }
 }
 
-.form__background > img {
+.form__background-login > img {
   position: relative;
-  bottom: 0.8rem;
+  bottom: 2.5rem;
   width: 50rem;
   height: 31rem;
   border-radius: 1rem;
@@ -2491,14 +2507,14 @@ a:hover {
 }
 
 @media only screen and (max-width: 576px) {
-  .form__background > img {
+  .form__background-login > img {
     width: auto;
     height: 33rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .form__background > img {
+  .form__background-login > img {
     -webkit-transform: scale(3.37);
             transform: scale(3.37);
     width: auto;

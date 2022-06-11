@@ -145,9 +145,10 @@ function see() {
     }, 4000)
     setTimeout(() => {
         see_span.innerHTML="5"
-        
+        see_span.style.transform="rotate(0deg)"
     }, 5000)
     setTimeout(() => {
+        
         password.type="password"; 
         see_span.innerHTML='<i class="fas fa-eye"></i>'
     }, 6000)
@@ -161,25 +162,26 @@ document.addEventListener("DOMContentLoaded", function () {
     let random = Math.floor(Math.random() * 5) + 1;
     switch (random) {
         case 1:
-            background.src = "../front-end/images/background-login1.jpg"
+            background.src = "../front-end/images/background-login6.jpg"
             break;
 
         case 2:
-            background.src = "../front-end/images/background-login2.jpg"
-            break;
-        case 3:
             background.src = "../front-end/images/background-login3.jpg"
             break;
+        case 3:
+            background.src = "../front-end/images/background-login8.jpg"
+            break;
         case 4:
-            background.src = "../front-end/images/background-login4.jpg"
+            background.src = "../front-end/images/background-login9.jpg"
             break;
         case 5:
-            background.src = "../front-end/images/background-login5.jpg"
+            background.src = "../front-end/images/background-login10.jpg"
             break;
     }
 })
 btn.addEventListener("click", function () {
     if ((email.value == "") || (fullname.value == "") || (password.value == "")) {
+
         error.style.right = "17.9rem";
         error.style.top = "27.9rem";
         error.innerHTML = "فیلد ها را پر کنید";
@@ -190,16 +192,20 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "1";
         }, 1000)
+        if (window.matchMedia("(max-width: 500px)").matches) {
+            alert("فیلد ها را پر کنید");
+            error.style.display = "none";
+            return animation();
+        }
         return animation()
+        
     }
 
     else if (fullname.value.length < 4) {
+
         error.style.right = "7.9rem";
         error.style.top = "28rem";
-        if (window.matchMedia("(max-width: 530px)").matches) {
-            error.style.right = "2.9rem";
-            error.style.top = "28rem";
-        }
+
         error.innerHTML = 'کاراکتر های نام کاربری باید حداقل ۴ تا باشند <i class="fas fa-window-close" style="color: #8a010f;padding-right: 0.2rem;animation: wave-hand 3.6s .3s;"></i>';
         setTimeout(() => {
             error.style.opacity = "1";
@@ -207,6 +213,11 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        if (window.matchMedia("(max-width: 576px)").matches) {
+            alert("کاراکتر های نام کاربری باید حداقل ۴ تا باشند");
+            error.style.display = "none";
+            return animation();
+        }
         return animation()
     }
     else if (password.value.length < 8 || password.value.length > 15) {
@@ -223,6 +234,11 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
+        if (window.matchMedia("(max-width: 576px)").matches) {
+            alert("کاراکتر های رمز باید بین ۸ تا ۱۵ باشند");
+            error.style.display = "none";
+            return animation();
+        }
         return animation()
     }
     else if (email.value == "@gmail.com") {
@@ -236,6 +252,11 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "1";
         }, 1000)
+        if (window.matchMedia("(max-width: 576px)").matches) {
+            alert("ایمیل نا معتبر است😕");
+            error.style.display = "none";
+            return animation();
+        }
         return animation()
     }
 
@@ -251,6 +272,11 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 3700)
+        if (window.matchMedia("(max-width: 576px)").matches) {
+            alert("جنسیت خود را انتخاب کنید🙍‍♀️🙎‍♂️");
+            error.style.display = "none";
+            return animation();
+        }
         return animation()
     }
     else {
@@ -258,6 +284,9 @@ btn.addEventListener("click", function () {
         error.style.top = "30.9rem";
         error.style.right = "19.8rem";
         error.innerHTML = "انجام شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
+        if (window.matchMedia("(max-width: 576px)").matches) {
+            error.style.display = " block";   
+        }
     }
     if (error.style.right == "19.8rem") {
         setTimeout(() => {

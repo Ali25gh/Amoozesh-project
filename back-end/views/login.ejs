@@ -1,37 +1,53 @@
-   <div id="form" class="rtl">
-        <main class="form-signin text-center pt-5">
-            <!--  include('./includes/errorsLogin.ejs') -->
-                <form action="/user/login" method="POST" class="pb-5">
-                    <h1 class="h3 mb-3 fw-normal">ورود به حساب کاربری</h1>
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
 
-                    <div class="">
-                        <label for="email" class="d-block">ایمیل</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com"
-                            required>
-                    </div>
-                    <div class="">
-                        <label for="password">رمز عبور</label>
-                        <input type="password" name="password" class="form-control" id="password" required
-                            placeholder="رمز عبور">
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amoozesh project</title>
+    <link rel="stylesheet" href="../front-end/stylesheets/all.css">
+    <link rel="stylesheet" href="../front-end/stylesheets/main.css">
+</head>
 
-                    
+<body>
+    <div id="contact" class="contact mt-50 mb-50">
+        <div id="glass" class="glass">
+            <form action="/user/login" method="post" class="form" id="form">
+                <div class="form__group">
+                    <input type="text" id="fullname" name="username" value="" onblur="glass_animation()">
+                    <label for="fullname" id="label_fullname">نام کاربری</label>
+                </div>
+                <div class="form__group">
+                    <input type="password" name="password" id="email" value="" onblur="glass_animation()">
+                    <label for="email" id="label_email">رمز</label>
+                    <span class="form__input-bar"></span>
+                </div>
+                <div class="form__group">
+                    <input type="checkbox" id="newsletter" name="remember">
+                    <label for="newsletter">من را فراموش نکن</label>
+                </div>
+                <div class="form__btn-position">
+                    <button id="btn_form" type="submit" class="btn btn__rippel btn__rippel--blue" disabled=""
+                        style="opacity: 0.5; pointer-events: none;">
+                        <i class="fas fa-paper-plane"></i> <span>ارسال</span>
 
-                    <div class=" checkbox mb-3">
-                        <label class="my-2">
-                            <input type="checkbox" value="remember-me" name="remember"> من را به خاطر بسپار
-                        </label>
-                    </div>
+                    </button>
+                </div>
+                <span class="form__error" id="err" style="opacity: 0;"></span>
 
-                    <!-- <div class="g-recaptcha" data-sitekey="6Lf4h0scAAAAACKwO0UfeY1nQjmz9yDnFPZakJtK"> -->
-                    <div class="g-recaptcha" data-sitekey="6LdBINAbAAAAALtx8kECMYZoLutAe48RXvL2qZkB">
-                    </div>
-
-                    <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">ورود</button>
-                    <p class="mt-3 mb-1 text-muted"> <a href="/user/register"> ثبت نام </a> </p>
-                    <div class="">
-                        <a href="/user/forget-password">فراموشی رمز عبور</a>
-                    </div>
-                </form>
-        </main>
+            </form>
+            <div class="form__singin">
+                <h5>حساب کاربری نداری؟ <a href="/user/signup">از اینجا بساز</a></h5>
+            </div>
+        </div>
+        <div class="form__background">
+            <img src="" alt="img" id="form__background">
+        </div>
     </div>
+
+
+</body>
+<script src="../front-end/script/form(login).js"></script>
+
+</html>

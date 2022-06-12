@@ -1,2 +1,40 @@
 
-    <h1>Hello World</h1>
+    <link rel="stylesheet" href="../front-end/stylesheets/all.css">
+    <link rel="stylesheet" href="../front-end/stylesheets/main.css">
+<body onscroll="close_login()">
+
+
+    <%- include("./includes/navbar.ejs")  %> 
+    
+    <header class="header">
+        <div class="header__banner">
+            <div class="header__h-tags">
+                <div class="header__wrap">
+                    <h1 class="header__intro" id="header__intro">به سایت آموزش خوش آمدید</h1>
+                </div>
+                <h2 class="header__subtitle"> با خواندن این متن وقت خود را تلف کردید</h2>
+                <h2 class="header__subtitle">این صرفا یک متن تستی است </h2>
+                <a href="https://github.com/Aligh5831" target="_blank" class="btn btn__swipe"><span>ورود به گیت
+                        هاب</span></a>
+                <div class="header__search">
+                    <div class="search" id="search">
+                        <form class="search__form" action="#" onsubmit="false">
+                            <input type="text" placeholder="جستجو کنید " class="search__input" id="search__input">
+                            <button class="search__button">
+                                <span class="search__circle"></span>
+                                <span class="search__stand"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__rocket-bg">
+                <div class="header__rocket"></div>
+            </div>
+        </div>
+    </header>
+</body>
+<script src="front-end/script/navbar.js"></script>
+
+</html>

@@ -1,10 +1,10 @@
 require('dotenv').config({path : './configs/configs.env'});
 const express = require('express');
 const expressEjsLayout = require('express-ejs-layouts')
-const mongoose = require('mongoose');
-const session = require("express-session");
+const passport = require('passport');
 const flash = require('connect-flash')
 const MongoStore = require('connect-mongo')
+const session = require("express-session");
 
 const path = require('path');
 
@@ -13,7 +13,11 @@ const connectDB = require('./configs/db');
 //* DataBase connection
 connectDB();
 
+//*Passport config
+require('./configs/passport');
+
 const app = express();
+
 
 //* body-parser
 app.use(express.urlencoded({ extended: false }));
@@ -34,6 +38,10 @@ app.use(
     })
     );
 
+
+//*passport 
+app.use(passport.initialize())
+app.use(passport.session())
 
 //*connect flash
 app.use(flash());

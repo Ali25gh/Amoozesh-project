@@ -7,6 +7,8 @@ const label_fullname = document.getElementById("label_fullname");
 const label_email = document.getElementById("label_email");
 const label_password = document.getElementById("label_password");
 const password = document.getElementById("password");
+const label_password2 = document.getElementById("label_password2");
+const password2 = document.getElementById("password2");
 const radio_text = document.getElementById("radio_text");
 const radio_text_2 = document.getElementById("radio_text_2");
 const radio_hand = document.getElementById("radio_hand");
@@ -66,6 +68,15 @@ function glass_animation() {
         label_password.style.webkitBorderBottomRightRadius = "20rem";
         label_password.style.webkitBorderBottomLeftRadius = "20rem";
     }
+    if (password2.innerHTML = !"") {
+        label_password2.style.top = "-1rem";
+        label_password2.style.bottom = "4rem";
+        label_password2.style.fontSize = "1.1rem";
+        label_password2.style.padding = "0 1rem";
+        label_password2.style.backgroundColor = "white";
+        label_password2.style.webkitBorderBottomRightRadius = "20rem";
+        label_password2.style.webkitBorderBottomLeftRadius = "20rem";
+    }
     if ((email.innerHTML = !"") && (fullname.innerHTML = ! "")) {
         btn.style.opacity = "1";
         btn.style.pointerEvents = "auto";
@@ -77,6 +88,7 @@ function male_radio() {
     famale_radio.value = ""
     male.value = ""
     radio_text.style.right = "18rem";
+    radio_text.style.top = "32.5rem";
     radio_hand.style.animation = "wave-hand 2.6s .3s";
     glass.style.animation = "none";
     setTimeout(() => {
@@ -101,6 +113,7 @@ function fmale_radio() {
     famale_radio.value = ""
     male.value = ""
     radio_text_2.style.right = "18rem";
+    radio_text_2.style.top = "32.5rem";
     radio_hand_2.style.animation = "wave-hand 2.6s .3s";
     glass.style.animation = "none";
     setTimeout(() => {
@@ -120,39 +133,7 @@ function fmale_radio() {
         }, 2000)
     }
 }
-let see_span = document.getElementById("see");
-function see() {
-    
-    setTimeout(() => {
-        see_span.style.transform="rotate(360deg)"
-    }, 100)
-    setTimeout(() => {
-        password.type="text"; 
-        see_span.innerHTML="1"
-        
-    }, 1000)
-    setTimeout(() => {
-        see_span.innerHTML="2"
-        
-    }, 2000)
-    setTimeout(() => {
-        see_span.innerHTML="3"
-        
-    }, 3000)
-    setTimeout(() => {
-        see_span.innerHTML="4"
-        
-    }, 4000)
-    setTimeout(() => {
-        see_span.innerHTML="5"
-        see_span.style.transform="rotate(0deg)"
-    }, 5000)
-    setTimeout(() => {
-        
-        password.type="password"; 
-        see_span.innerHTML='<i class="fas fa-eye"></i>'
-    }, 6000)
-}
+
 //Etebar sangi form
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -182,8 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
 btn.addEventListener("click", function () {
     if ((email.value == "") || (fullname.value == "") || (password.value == "")) {
 
-        error.style.right = "17.9rem";
-        error.style.top = "27.9rem";
+        error.style.right = "25.9rem";
+        error.style.top = "14.9rem";
         error.innerHTML = "فیلد ها را پر کنید";
 
         setTimeout(() => {
@@ -192,7 +173,7 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "1";
         }, 1000)
-        if (window.matchMedia("(max-width: 500px)").matches) {
+        if (window.matchMedia("(max-width: 768px)").matches) {
             alert("فیلد ها را پر کنید");
             error.style.display = "none";
             return animation();
@@ -203,8 +184,8 @@ btn.addEventListener("click", function () {
 
     else if (fullname.value.length < 4) {
 
-        error.style.right = "7.9rem";
-        error.style.top = "28rem";
+        error.style.right = "25.9rem";
+        error.style.top = "14.9rem";
 
         error.innerHTML = 'کاراکتر های نام کاربری باید حداقل ۴ تا باشند <i class="fas fa-window-close" style="color: #8a010f;padding-right: 0.2rem;animation: wave-hand 3.6s .3s;"></i>';
         setTimeout(() => {
@@ -213,7 +194,7 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
-        if (window.matchMedia("(max-width: 576px)").matches) {
+        if (window.matchMedia("(max-width: 768px)").matches) {
             alert("کاراکتر های نام کاربری باید حداقل ۴ تا باشند");
             error.style.display = "none";
             return animation();
@@ -221,8 +202,8 @@ btn.addEventListener("click", function () {
         return animation()
     }
     else if (password.value.length < 8 || password.value.length > 15) {
-        error.style.right = "9.9rem";
-        error.style.top = "28rem";
+        error.style.right = "25.9rem";
+        error.style.top = "14.9rem";
         if (window.matchMedia("(max-width: 530px)").matches) {
             error.style.right = "2.9rem";
             error.style.top = "20rem";
@@ -234,7 +215,28 @@ btn.addEventListener("click", function () {
         setTimeout(() => {
             error.style.opacity = "0";
         }, 4000)
-        if (window.matchMedia("(max-width: 576px)").matches) {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            alert("کاراکتر های رمز باید بین ۸ تا ۱۵ باشند");
+            error.style.display = "none";
+            return animation();
+        }
+        return animation()
+    }
+    else if(password.value !== password2.value){
+        error.style.right = "25.9rem";
+        error.style.top = "14.9rem";
+        if (window.matchMedia("(max-width: 530px)").matches) {
+            error.style.right = "2.9rem";
+            error.style.top = "20rem";
+        }
+        error.innerHTML = 'رمز ها شبیه هم نیستند 🧐';
+        setTimeout(() => {
+            error.style.opacity = "1";
+        }, 1000)
+        setTimeout(() => {
+            error.style.opacity = "0";
+        }, 4000)
+        if (window.matchMedia("(max-width: 768px)").matches) {
             alert("کاراکتر های رمز باید بین ۸ تا ۱۵ باشند");
             error.style.display = "none";
             return animation();
@@ -242,17 +244,18 @@ btn.addEventListener("click", function () {
         return animation()
     }
     else if (email.value == "@gmail.com") {
-        error.style.right = "17.9rem";
-        error.style.top = "27.9rem";
+        error.style.right = "25.9rem";
+        error.style.top = "14.9rem";
         error.innerHTML = "ایمیل نا معتبر است😕";
-
+        
         setTimeout(() => {
             error.style.opacity = "0";
+
         }, 4000)
         setTimeout(() => {
             error.style.opacity = "1";
         }, 1000)
-        if (window.matchMedia("(max-width: 576px)").matches) {
+        if (window.matchMedia("(max-width: 768px)").matches) {
             alert("ایمیل نا معتبر است😕");
             error.style.display = "none";
             return animation();
@@ -261,18 +264,17 @@ btn.addEventListener("click", function () {
     }
 
     else if (famale_radio.value == "not_selected" && (male.value == "not_selected")) {
-        error.style.right = "13.9rem";
-        error.style.top = "27.9rem";
+        error.style.right = "25.9rem";
+        error.style.top = "14.9rem";
         error.style.opacity = "1";
         setTimeout(() => {
             error.innerHTML = "جنسیت خود را انتخاب کنید" + " " + "🙍‍♀️🙎‍♂️";
-            error.style.top = "27.9rem";
-            error.style.opacity = "1";
+
         }, 700)
         setTimeout(() => {
             error.style.opacity = "0";
         }, 3700)
-        if (window.matchMedia("(max-width: 576px)").matches) {
+        if (window.matchMedia("(max-width: 768px)").matches) {
             alert("جنسیت خود را انتخاب کنید🙍‍♀️🙎‍♂️");
             error.style.display = "none";
             return animation();
@@ -281,14 +283,14 @@ btn.addEventListener("click", function () {
     }
     else {
         error.style.opacity = "1";
-        error.style.top = "30.9rem";
-        error.style.right = "19.8rem";
+        error.style.right = "25.8rem";
+        error.style.top = "14.9rem";
         error.innerHTML = "انجام شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
-        if (window.matchMedia("(max-width: 576px)").matches) {
+        if (window.matchMedia("(max-width: 768px)").matches) {
             error.style.display = " block";   
         }
     }
-    if (error.style.right == "19.8rem") {
+    if (error.style.right == "25.8rem") {
         setTimeout(() => {
             btn.style.animation = "fade-out .76s ease";
             btn.style.pointerEvents = "none";

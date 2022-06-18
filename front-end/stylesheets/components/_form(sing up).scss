@@ -29,7 +29,7 @@
     }
     &__check-text {
         position: absolute;
-        top: 27.7rem;
+        top: 35.7rem;
         right: -11rem;
         pointer-events: none;
         transition: all 0.5s cubic-bezier(0.27, 0.12, 0.2, 1.03);
@@ -194,30 +194,11 @@
         @include flex(center, center);
         width: 92%;
     }
-    &__eye {
-        font-family: "vazir";
-        position: relative;
-        bottom: 30.7rem;
-        right: 41rem;
-        padding: 1rem;
-        cursor: pointer;
-        transition: all 1s ease;
-        @media only screen and (max-width: 768px){
-            position: absolute;
-            bottom: 20.9rem;
-            right: -0.5rem;
-        }
-        @media only screen and (max-width: 576px){
-            position: absolute;
-            bottom: 22.7rem;
-            right: -0.5rem;
-        }
-    }
+
     &__error {
-        position: absolute;
-        top: 32.1rem;
-        //right: 19.9rem;
-        right: -15.1rem;
+        position: relative;
+        top: 66.1rem;
+        right: 41.9rem;
         white-space: nowrap;
         overflow: hidden;
         font-size: 1.6rem;
@@ -235,11 +216,13 @@
     &__background-login > img {
         position: relative;
         bottom: 2.5rem;
+        
         width: 50rem;
-        height: 31rem;
+        height: 37rem;
         border-radius: 1rem;
         z-index: 0;
         transition: all 0.5s ease-in-out;
+        overflow: hidden;
         @media only screen and (max-width: 576px) {
             width: auto;
             height: 33rem;

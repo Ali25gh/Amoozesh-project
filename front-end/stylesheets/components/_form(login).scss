@@ -173,6 +173,27 @@
             font-size: 1.2rem;
         }
     }
+    &__eye {
+        font-family: "vazir";
+        position: relative;
+        bottom: 3.7rem;
+        right: 48.5rem;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 1s ease;
+        opacity: .2;
+        @media only screen and (max-width: 768px){
+            position: absolute;
+            bottom: 3.7rem;
+            right: 48rem;
+        }
+        @media only screen and (max-width: 576px){
+            position: absolute;
+            bottom: 3.7rem;
+            right: 48rem;
+        }
+        z-index: 1;
+    }
     &__singin {
         @include flex(center, center);
         width: 90%;
@@ -182,6 +203,7 @@
     &__background > img {
         position: relative;
         bottom:  .8rem;
+        left: 2rem;
         width: 50rem;
         height: 31rem;
         border-radius: 1rem;

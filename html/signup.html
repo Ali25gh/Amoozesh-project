@@ -25,8 +25,15 @@
                     
                 </div>
                 <div class="form__group">
+                    <input type="password" id="password2" value="" onblur="glass_animation()">
+                    
+                    <label for="password2" id="label_password2">تکرار رمز</label>
+                    
+                </div>
+                <div class="form__group">
                     <input dir="ltr" type="email" id="email" value="@gmail.com" onblur="glass_animation()">
                     <label for="email" id="label_email">ایمیل</label>
+                    
                     <span class="form__input-bar"></span>
                 </div>
 
@@ -54,11 +61,11 @@
 
                     </button>
                 </div>
-                <span onclick="see()" id="see" class="form__eye"><i class="fas fa-eye"></i></span>
-                <span class="form__error" id="err"></span>
+
                 
             </form>
         </div>
+        <span class="form__error" id="err"></span>
         <div class="form__background-login">
             <img src="" alt="img" id="form__background">
         </div>

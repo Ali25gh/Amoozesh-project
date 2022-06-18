@@ -1839,7 +1839,7 @@ a:hover {
 .glass1 {
   position: absolute;
   width: 50rem;
-  height: 36.5rem;
+  height: 43.5rem;
   border: 1px solid #f1f1f1;
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.329);
@@ -1861,7 +1861,7 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .glass1 {
     width: 85%;
-    height: 36rem;
+    height: 44rem;
   }
   .glass1 .form__input-bar {
     display: none;
@@ -1870,7 +1870,7 @@ a:hover {
 
 @media only screen and (max-width: 576px) {
   .glass1 {
-    height: 38rem;
+    height: 46rem;
   }
 }
 
@@ -2145,6 +2145,35 @@ a:hover {
   }
 }
 
+.form__eye {
+  font-family: "vazir";
+  position: relative;
+  bottom: 3.7rem;
+  right: 48.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: .2;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .form__eye {
+    position: absolute;
+    bottom: 3.7rem;
+    right: 48rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .form__eye {
+    position: absolute;
+    bottom: 3.7rem;
+    right: 48rem;
+  }
+}
+
 .form__singin {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2163,6 +2192,7 @@ a:hover {
 .form__background > img {
   position: relative;
   bottom: .8rem;
+  left: 2rem;
   width: 50rem;
   height: 31rem;
   border-radius: 1rem;
@@ -2237,7 +2267,7 @@ a:hover {
 
 .form__check-text {
   position: absolute;
-  top: 27.7rem;
+  top: 35.7rem;
   right: -11rem;
   pointer-events: none;
   -webkit-transition: all 0.5s cubic-bezier(0.27, 0.12, 0.2, 1.03);
@@ -2442,37 +2472,10 @@ a:hover {
   width: 92%;
 }
 
-.form__eye {
-  font-family: "vazir";
-  position: relative;
-  bottom: 30.7rem;
-  right: 41rem;
-  padding: 1rem;
-  cursor: pointer;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-@media only screen and (max-width: 768px) {
-  .form__eye {
-    position: absolute;
-    bottom: 20.9rem;
-    right: -0.5rem;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .form__eye {
-    position: absolute;
-    bottom: 22.7rem;
-    right: -0.5rem;
-  }
-}
-
 .form__error {
-  position: absolute;
-  top: 32.1rem;
-  right: -15.1rem;
+  position: relative;
+  top: 66.1rem;
+  right: 41.9rem;
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.6rem;
@@ -2499,11 +2502,12 @@ a:hover {
   position: relative;
   bottom: 2.5rem;
   width: 50rem;
-  height: 31rem;
+  height: 37rem;
   border-radius: 1rem;
   z-index: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 576px) {

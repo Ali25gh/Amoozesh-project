@@ -38,6 +38,7 @@ function animation() {
 }
 function glass_animation() {
     glass.style.backgroundColor = "white"
+    see_span.style.opacity = "1"
     if (fullname.innerHTML = !"") {
         label_fullname.style.top = "-1rem";
         label_fullname.style.bottom = "4rem";
@@ -109,6 +110,39 @@ function fmale_radio() {
         }, 2000)
     }
 }
+let see_span = document.getElementById("see");
+function see() {
+    
+    setTimeout(() => {
+        see_span.style.transform="rotate(360deg)"
+    }, 100)
+    setTimeout(() => {
+        email.type="text"; 
+        see_span.innerHTML="1"
+        
+    }, 1000)
+    setTimeout(() => {
+        see_span.innerHTML="2"
+        
+    }, 2000)
+    setTimeout(() => {
+        see_span.innerHTML="3"
+        
+    }, 3000)
+    setTimeout(() => {
+        see_span.innerHTML="4"
+        
+    }, 4000)
+    setTimeout(() => {
+        see_span.innerHTML="5"
+        see_span.style.transform="rotate(0deg)"
+    }, 5000)
+    setTimeout(() => {
+        
+        email.type="password"; 
+        see_span.innerHTML='<i class="fas fa-eye"></i>'
+    }, 6000)
+}
 //Etebar sangi form
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -139,11 +173,12 @@ document.addEventListener("DOMContentLoaded", function () {
 btn.addEventListener("click", function () {
     
     if ((email.value == "") || (fullname.value == "")) {
+        error.style.position = "absolute";
         error.style.right = "35.9rem";
         error.style.top = "27rem";
         if (window.matchMedia("(max-width: 530px)").matches) {
-            error.style.right = "16.9rem";
-            error.style.top = "28rem";
+            error.style.right = "12.9rem";
+            error.style.top = "29rem";
         }
         error.innerHTML = "فیلد ها را پر کنید";
         error.style.opacity = "1";
@@ -154,11 +189,12 @@ btn.addEventListener("click", function () {
         
     }
     else if (fullname.value.length < 4) {
-        error.style.right = "10.9rem";
+        error.style.position = "absolute";
+        error.style.right = "8.9rem";
         error.style.top = "20rem";
         if (window.matchMedia("(max-width: 530px)").matches) {
-            error.style.right = "2.9rem";
-            error.style.top = "20rem";
+            error.style.right = "5.9rem";
+            error.style.top = "21rem";
         }
         error.style.opacity = "0";
         error.innerHTML = 'کاراکتر های نام کاربری باید حداقل ۴ تا باشند <i class="fas fa-window-close" style="color: #8a010f;padding-right: 0.2rem;animation: wave-hand 3.6s .3s;"></i>';
@@ -171,6 +207,7 @@ btn.addEventListener("click", function () {
         return animation()
     }
     else if (email.value.length < 8 || email.value.length > 15) {
+        error.style.position = "absolute";
         error.style.right = "10.9rem";
         error.style.top = "20rem";
         if (window.matchMedia("(max-width: 530px)").matches) {
@@ -188,16 +225,17 @@ btn.addEventListener("click", function () {
         return animation()
     }
     else {
+        error.style.position = "absolute";
         error.style.opacity = "1";
         error.style.right = "20.3rem";
         error.style.top = "24rem";
         if (window.matchMedia("(max-width: 530px)").matches) {
-            error.style.right = "15.9rem";
+            error.style.right = "13.9rem";
             error.style.top = "24rem";
         }
         error.innerHTML = "انجام شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
     }
-    if (error.style.right == "20.3rem" || error.style.right == "15.9rem") {
+    if (error.style.right == "20.3rem" || error.style.right == "13.9rem") {
         setTimeout(() => {
             btn.style.animation = "fade-out .76s ease";
             btn.style.pointerEvents = "none";

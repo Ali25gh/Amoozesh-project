@@ -1,0 +1,82 @@
+body{
+    background-color:$color-blue4 ;
+}
+header{
+    text-align: center;
+    border-bottom: 1px solid $color-blue2;
+    padding-bottom: 1rem;
+}
+.admin{
+    &__nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 22rem;
+        height: 100rem;
+        background-color: $color-white;
+        padding: 1rem;
+    }
+    &__nav-li{
+        padding: 2rem;
+    }
+    &__a-nav{
+        background-color: $color-blue4;
+        padding: 1.6rem;
+        border-radius: 20%;
+        margin: 0 ;
+        width: 1rem;
+        transition: all .3s ease;
+        overflow: hidden;
+        &:hover{
+            .admin__nav-icon{
+                transform: scale(1.5);
+                color: $color-blue1;
+                
+            }
+            .admin__nav-icon{
+                padding-right: .5rem;
+            }
+            // &{
+            //     
+            // }
+        }
+    }
+    &__a-nav-home{
+        background-color: $color-blue4;
+        padding: 1.6rem;
+        border-radius: 20%;
+        margin: 0 ;
+        width: 1rem;
+        &:hover{
+            .admin__nav-icon{
+                transform: scale(2);
+                color: $color-blue1;
+            }
+        }
+    }
+    &__li-nav-home{
+        text-align: center;
+        
+    }
+    &__nav-icon{
+        transition: all .3s ease;
+    }
+    &__nav-span-all{
+        
+    }
+    &__nav-span1{
+        padding: 2.6rem;
+    }
+    &__nav-span2{
+        padding: 3rem;
+    }
+    &__nav-span3{
+        padding: 0.9rem;
+    }
+    &__nav-span4{
+        padding: 0.6rem;
+    }
+}
+.active__nav{
+        padding-right: 18rem;
+}

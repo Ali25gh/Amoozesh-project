@@ -2529,6 +2529,94 @@ html {
   overflow: hidden;
 }
 
+body {
+  background-color: #edfcff;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #2196f3;
+  padding-bottom: 1rem;
+}
+
+.admin__nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 22rem;
+  height: 100rem;
+  background-color: white;
+  padding: 1rem;
+}
+
+.admin__nav-li {
+  padding: 2rem;
+}
+
+.admin__a-nav {
+  background-color: #edfcff;
+  padding: 1.6rem;
+  border-radius: 20%;
+  margin: 0;
+  width: 1rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+.admin__a-nav:hover .admin__nav-icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #0d62da;
+}
+
+.admin__a-nav:hover .admin__nav-icon {
+  padding-right: .5rem;
+}
+
+.admin__a-nav-home {
+  background-color: #edfcff;
+  padding: 1.6rem;
+  border-radius: 20%;
+  margin: 0;
+  width: 1rem;
+}
+
+.admin__a-nav-home:hover .admin__nav-icon {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  color: #0d62da;
+}
+
+.admin__li-nav-home {
+  text-align: center;
+}
+
+.admin__nav-icon {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.admin__nav-span1 {
+  padding: 2.6rem;
+}
+
+.admin__nav-span2 {
+  padding: 3rem;
+}
+
+.admin__nav-span3 {
+  padding: 0.9rem;
+}
+
+.admin__nav-span4 {
+  padding: 0.6rem;
+}
+
+.active__nav {
+  padding-right: 18rem;
+}
+
 .nav__lists {
   position: relative;
   display: -webkit-box;

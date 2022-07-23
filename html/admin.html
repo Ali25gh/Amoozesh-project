@@ -11,36 +11,40 @@
 </head>
 
 <body>
+
     <div class="admin">
         <div class="admin__nav">
             <header><span>علی قبادی</span></header>
             <ul class="admin__nav-ul">
-                <li class="admin__nav-li admin__li-nav-home">
-                    <a class=" admin__a-nav-home " href="#" >
-                        <i class="fas admin__nav-icon fa-home"></i>
-                    </a>
-                </li>
-                <li class="admin__nav-li">
-                    <a class="admin__a-nav" href="#">
-                        <i class="fas admin__nav-icon fa-eye"></i>
+
+                <li class="admin__nav-li" onclick="Ajax_view()">
+                    <a class="admin__a-nav" id="view" href="#">
+                        <i class="fas admin__nav-icon fa-eye" id="view-icon"></i>
                         <span class="admin__nav-span2 admin__nav-span-all"> ویو ها</span>
                     </a>
                 </li>
-                <li class="admin__nav-li">
-                    <a class="admin__a-nav" href="#">
-                        <i class="fas admin__nav-icon fa-book"></i>
+                <li class="admin__nav-li" onclick="Ajax_post()">
+                    <a class="admin__a-nav" id="post" href="#">
+                        <i class="fas admin__nav-icon fa-book" id="post-icon"></i>
                         <span class="admin__nav-span3 admin__nav-span-all"> گذاشتن پست</span>
                     </a>
                 </li>
-                <li class="admin__nav-li">
-                    <a class="admin__a-nav" href="#">
-                        <i class="fas admin__nav-icon fa-shopping-basket"></i>
+                <li class="admin__nav-li" onclick="Ajax_buy()">
+                    <a class="admin__a-nav" href="#" id="buy">
+                        <i class="fas admin__nav-icon fa-shopping-basket" id="buy-icon"></i>
                         <span class="admin__nav-span4 admin__nav-span-all">گزارشات خرید</span>
                     </a>
                 </li>
             </ul>
+            <div style="margin-top: 66rem;">
+                <a style="padding-right: 2rem;" href="#">
+                    <span id="home_span">بازگشت به صفحه ی اصلی</span>
+                </a>
+            </div>
         </div>
     </div>
+    <div id="resault"></div>
+    <script src="../front-end/script/admin.js"></script>
 </body>
 
 </html>

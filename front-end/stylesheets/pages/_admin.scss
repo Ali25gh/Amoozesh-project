@@ -1,13 +1,13 @@
-body{
-    background-color:$color-blue4 ;
+body {
+    background-color: $color-blue4;
 }
-header{
+header {
     text-align: center;
     border-bottom: 1px solid $color-blue2;
     padding-bottom: 1rem;
 }
-.admin{
-    &__nav{
+.admin {
+    &__nav {
         position: fixed;
         top: 0;
         right: 0;
@@ -16,67 +16,76 @@ header{
         background-color: $color-white;
         padding: 1rem;
     }
-    &__nav-li{
+    &__nav-li {
         padding: 2rem;
     }
-    &__a-nav{
+    &__a-nav {
         background-color: $color-blue4;
         padding: 1.6rem;
         border-radius: 20%;
-        margin: 0 ;
+        margin: 0;
         width: 1rem;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         overflow: hidden;
-        &:hover{
-            .admin__nav-icon{
+        &:hover {
+            .admin__nav-icon {
                 transform: scale(1.5);
                 color: $color-blue1;
-                
             }
-            .admin__nav-icon{
-                padding-right: .5rem;
+            .admin__nav-icon {
+                padding-right: 0.5rem;
             }
             // &{
-            //     
+            //
             // }
         }
     }
-    &__a-nav-home{
+    &__a-nav-home {
         background-color: $color-blue4;
         padding: 1.6rem;
         border-radius: 20%;
-        margin: 0 ;
+        margin: 0;
         width: 1rem;
-        &:hover{
-            .admin__nav-icon{
+
+        &:hover {
+            .admin__nav-icon {
                 transform: scale(2);
                 color: $color-blue1;
             }
         }
     }
-    &__li-nav-home{
+    &__li-nav-home {
         text-align: center;
-        
     }
-    &__nav-icon{
-        transition: all .3s ease;
+    &__nav-icon {
+        transition: all 0.3s ease;
     }
-    &__nav-span-all{
-        
+    &__nav-span-all {
     }
-    &__nav-span1{
+    &__nav-span1 {
         padding: 2.6rem;
     }
-    &__nav-span2{
+    &__nav-span2 {
         padding: 3rem;
     }
-    &__nav-span3{
+    &__nav-span3 {
         padding: 0.9rem;
     }
-    &__nav-span4{
+    &__nav-span4 {
         padding: 0.6rem;
     }
 }
-.active__nav{
-        padding-right: 18rem;
+.active__nav {
+    padding-right: 18rem;
+}
+.active__icon {
+    transform: scale(1.5);
+}
+#resault {
+    position: relative;
+    top: 45rem;
+    right: 65rem;
+}
+#home_span{
+    transition: all .3s ease;
 }
